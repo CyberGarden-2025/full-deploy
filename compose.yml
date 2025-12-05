@@ -5,6 +5,15 @@ services:
     build: ./recognize-backend
     ports:
       - "8000:8000"
+    environment:
+      HTTP_PROXY_SERVER: ${HTTP_PROXY_SERVER}
+      OPENAI_API_BASE: ${OPENAI_API_BASE}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_GPT_MODEL: ${OPENAI_GPT_MODEL}
+      S3_ENDPOINT: "http://minio:9000"
+      S3_ACCESS_KEY: ${S3_ACCESS_KEY}
+      S3_SECRET_KEY: ${S3_SECRET_KEY}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
     depends_on:
       minio:
         condition: service_healthy
@@ -21,9 +30,9 @@ services:
     command: server /data --console-address ":9001"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-      interval: 30s
-      timeout: 20s
-      retries: 3
+      interval: 3s
+      timeout: 5s
+      retries: 8
     restart: always
 
 volumes:
