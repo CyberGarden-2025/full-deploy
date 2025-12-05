@@ -1,3 +1,6 @@
 [submodule "recognize-backend"]
 	path = recognize-backend
 	url = https://github.com/CyberGarden-2025/recognize-backend
+[submodule "main-backend"]
+	path = main-backend
+	url = https://github.com/CyberGarden-2025/garbage-backend
