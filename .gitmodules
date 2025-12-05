@@ -1,0 +1,3 @@
+[submodule "recognize-backend"]
+	path = recognize-backend
+	url = https://github.com/CyberGarden-2025/recognize-backend
