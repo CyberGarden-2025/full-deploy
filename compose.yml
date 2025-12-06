@@ -74,7 +74,7 @@ services:
   
   db:
     container_name: db
-    image: postgres
+    image: postgres:17
     user: postgres
     volumes:
       - db-data:/var/lib/postgresql/data
