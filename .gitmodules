@@ -4,3 +4,9 @@
 [submodule "main-backend"]
 	path = main-backend
 	url = https://github.com/CyberGarden-2025/garbage-backend
+[submodule "admin-panel"]
+	path = admin-panel
+	url = https://github.com/kozhemyar/admin-panel
+[submodule "oggetto-web-app"]
+	path = oggetto-web-app
+	url = https://github.com/DaniiL10062005/oggetto-web-app
